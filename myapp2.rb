@@ -17,3 +17,17 @@ when /mple1/
 else
   print "case 4"
 end
+
+list = %w[ qwe1 qwe2 qwe3 qwe4 qwe5 ]
+
+list.each do |x|
+  puts "value: #{x}"
+end
+
+def my_sequence
+  (1..10).each do |value|
+    yield value
+  end
+end
+
+my_sequence { |x| puts x**3 }
